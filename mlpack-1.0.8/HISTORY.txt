@@ -1,0 +1,144 @@
+2014-01-06    mlpack 1.0.8
+
+  * Memory leak in NeighborSearch index-mapping code fixed (#310).
+
+  * GMMs can be trained using the existing model as a starting point by
+    specifying an additional boolean parameter to GMM::Estimate() (#308).
+
+  * Logistic regression implementation added in methods/logistic_regression (see
+    also #305).
+
+  * L-BFGS optimizer now returns its function via Function().
+
+  * Version information is now obtainable via mlpack::util::GetVersion() or the
+    __MLPACK_VERSION_MAJOR, __MLPACK_VERSION_MINOR, and  __MLPACK_VERSION_PATCH
+    macros (#309).
+
+  * Fix typos in allkfn and allkrann output.
+
+2013-10-04    mlpack 1.0.7
+
+  * Cover tree support for range search (range_search), rank-approximate nearest
+    neighbors (allkrann), minimum spanning tree calculation (emst), and FastMKS
+    (fastmks).
+
+  * Dual-tree FastMKS implementation added and tested.
+
+  * Added collaborative filtering package (cf) that can provide recommendations
+    when given users and items.
+
+  * Fix for correctness of Kernel PCA (kernel_pca) (#280).
+
+  * Speedups for PCA and Kernel PCA (#204).
+
+  * Fix for correctness of Neighborhood Components Analysis (NCA) (#289).
+
+  * Minor speedups for dual-tree algorithms.
+
+  * Fix for Naive Bayes Classifier (nbc) (#279).
+
+  * Added a ridge regression option to LinearRegression (linear_regression)
+    (#298).
+
+  * Gaussian Mixture Models (gmm::GMM<>) now support arbitrary covariance matrix
+    constraints (#294).
+
+  * MVU (mvu) removed because it is known to not work (#189).
+
+  * Minor updates and fixes for kernels (in mlpack::kernel).
+
+2013-06-13    mlpack 1.0.6
+
+  * Minor bugfix so that FastMKS gets built.
+
+2013-05-01    mlpack 1.0.5
+
+  * Speedups of cover tree traversers (#243).
+
+  * Addition of rank-approximate nearest neighbors (RANN), found in
+    src/mlpack/methods/rann/.
+
+  * Addition of fast exact max-kernel search (FastMKS), found in
+    src/mlpack/methods/fastmks/.
+
+  * Fix for EM covariance estimation; this should improve GMM training time.
+
+  * More parameters for GMM estimation.
+
+  * Force GMM and GaussianDistribution covariance matrices to be positive
+    definite, so that training converges much more often.
+
+  * Add parameter for the tolerance of the Baum-Welch algorithm for HMM
+    training.
+
+  * Fix for compilation with clang compiler.
+
+  * Fix for k-furthest-neighbor-search.
+
+2013-02-08    mlpack 1.0.4
+
+  * Force minimum Armadillo version to 2.4.2.
+
+  * Better output of class types to streams; a class with a ToString() method
+    implemented can be sent to a stream with operator<<.  See #164.
+
+  * Change return type of GMM::Estimate() to double (#266).
+
+  * Style fixes for k-means and RADICAL.
+
+  * Handle size_t support correctly with Armadillo 3.6.2 (#267).
+
+  * Add locality-sensitive hashing (LSH), found in src/mlpack/methods/lsh/.
+
+  * Better tests for SGD (stochastic gradient descent) and NCA (neighborhood
+    components analysis).
+
+2012-09-16    mlpack 1.0.3
+
+  * Remove internal sparse matrix support because Armadillo 3.4.0 now includes
+    it.  When using Armadillo versions older than 3.4.0, sparse matrix support
+    is not available.
+
+  * NCA (neighborhood components analysis) now support an arbitrary optimizer
+    (#254), including stochastic gradient descent (#258).
+
+2012-08-15    mlpack 1.0.2
+
+  * Added density estimation trees, found in src/mlpack/methods/det/.
+
+  * Added non-negative matrix factorization, found in src/mlpack/methods/nmf/.
+
+  * Added experimental cover tree implementation, found in
+    src/mlpack/core/tree/cover_tree/ (#156).
+
+  * Better reporting of boost::program_options errors (#231).
+
+  * Fix for timers on Windows (#218, #217).
+
+  * Fix for allknn and allkfn output (#210).
+
+  * Sparse coding dictionary initialization is now a template parameter (#226).
+
+2012-03-03    mlpack 1.0.1
+
+  * Added kernel principal components analysis (kernel PCA), found in
+    src/mlpack/methods/kernel_pca/ (#47).
+
+  * Fix for Lovasz-Theta AugLagrangian tests (#188).
+
+  * Fixes for allknn output (#191, #192).
+
+  * Added range search executable (#198).
+
+  * Adapted citations in documentation to BiBTeX; no citations in -h output
+    (#201).
+
+  * Stop use of 'const char*' and prefer 'std::string' (#183).
+
+  * Support seeds for random numbers (#182).
+
+2011-12-17    mlpack 1.0.0
+
+  * Initial release.  See any resolved tickets numbered less than #196 or
+    execute this query:
+    http://www.mlpack.org/trac/query?status=closed&milestone=mlpack+1.0.0
