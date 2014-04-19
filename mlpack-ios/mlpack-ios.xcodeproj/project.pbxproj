@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7910447919026CA800DDFC2B /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7910447819026CA800DDFC2B /* boost.framework */; };
+		7910447B19026CD600DDFC2B /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7910447A19026CD600DDFC2B /* libxml2.2.dylib */; };
 		79C8F48D190236C300064E3E /* arma_extend.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 79C8F344190236C300064E3E /* arma_extend.hpp */; };
 		79C8F48E190236C300064E3E /* fn_ccov.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 79C8F346190236C300064E3E /* fn_ccov.hpp */; };
 		79C8F48F190236C300064E3E /* fn_inplace_reshape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 79C8F347190236C300064E3E /* fn_inplace_reshape.hpp */; };
@@ -261,9 +263,12 @@
 		79C8F588190236C300064E3E /* sparse_coding.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 79C8F48A190236C300064E3E /* sparse_coding.hpp */; };
 		79C8F589190236C300064E3E /* sparse_coding_impl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 79C8F48B190236C300064E3E /* sparse_coding_impl.hpp */; };
 		79C8F58A190236C300064E3E /* sparse_coding_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F48C190236C300064E3E /* sparse_coding_main.cpp */; };
+		EA127665A48F438688DFEF0C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1C709CA68B4FBE849724B7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7910447819026CA800DDFC2B /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = ../boostmake/ios/framework/boost.framework; sourceTree = "<group>"; };
+		7910447A19026CD600DDFC2B /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/libxml2.2.dylib; sourceTree = DEVELOPER_DIR; };
 		79C8F33A1902355200064E3E /* libmlpack-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmlpack-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C8F344190236C300064E3E /* arma_extend.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = arma_extend.hpp; sourceTree = "<group>"; };
 		79C8F345190236C300064E3E /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -555,6 +560,8 @@
 		79C8F48A190236C300064E3E /* sparse_coding.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sparse_coding.hpp; sourceTree = "<group>"; };
 		79C8F48B190236C300064E3E /* sparse_coding_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sparse_coding_impl.hpp; sourceTree = "<group>"; };
 		79C8F48C190236C300064E3E /* sparse_coding_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sparse_coding_main.cpp; sourceTree = "<group>"; };
+		D4E73092C3CB4150A6972B0F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DF1C709CA68B4FBE849724B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -562,17 +569,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7910447B19026CD600DDFC2B /* libxml2.2.dylib in Frameworks */,
+				7910447919026CA800DDFC2B /* boost.framework in Frameworks */,
+				EA127665A48F438688DFEF0C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1F1EF652824EBCAB710DF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7910447A19026CD600DDFC2B /* libxml2.2.dylib */,
+				7910447819026CA800DDFC2B /* boost.framework */,
+				DF1C709CA68B4FBE849724B7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79C8F3311902355200064E3E = {
 			isa = PBXGroup;
 			children = (
 				79C8F341190236B400064E3E /* mlpack-src */,
 				79C8F33B1902355200064E3E /* Products */,
+				D4E73092C3CB4150A6972B0F /* Pods.xcconfig */,
+				4C1F1EF652824EBCAB710DF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1426,9 +1448,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79C8F33E1902355200064E3E /* Build configuration list for PBXNativeTarget "mlpack-ios" */;
 			buildPhases = (
+				2B6358731B3D4C3E8545E03A /* Check Pods Manifest.lock */,
 				79C8F3361902355200064E3E /* Sources */,
 				79C8F3371902355200064E3E /* Frameworks */,
 				79C8F3381902355200064E3E /* Headers */,
+				91D6BE5A52F5443789EACBA5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1464,6 +1488,39 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B6358731B3D4C3E8545E03A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		91D6BE5A52F5443789EACBA5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79C8F3361902355200064E3E /* Sources */ = {
@@ -1604,12 +1661,18 @@
 		};
 		79C8F33F1902355200064E3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E73092C3CB4150A6972B0F /* Pods.xcconfig */;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/alist/Documents/headtalk/dev/mlpack-ios/boostmake/ios/framework",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"../mlpack-1.0.8/src",
+					"${SDK_DIR}/usr/include/libxml2/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos7.1;
@@ -1618,12 +1681,18 @@
 		};
 		79C8F3401902355200064E3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E73092C3CB4150A6972B0F /* Pods.xcconfig */;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/alist/Documents/headtalk/dev/mlpack-ios/boostmake/ios/framework",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"../mlpack-1.0.8/src",
+					"${SDK_DIR}/usr/include/libxml2/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos7.1;
@@ -1649,6 +1718,7 @@
 				79C8F3401902355200064E3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

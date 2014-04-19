@@ -1,0 +1,33 @@
+PODS:
+  - armadillo (0.0.5)
+  - boost (1.51.0):
+    - boost/graph-includes
+    - boost/math-includes
+    - boost/numeric-includes
+    - boost/pointer_cast-includes
+    - boost/preprocessor-includes
+    - boost/shared_ptr-includes
+    - boost/string_algorithms-includes
+  - boost/graph-includes (1.51.0)
+  - boost/math-includes (1.51.0)
+  - boost/numeric-includes (1.51.0)
+  - boost/pointer_cast-includes (1.51.0)
+  - boost/preprocessor-includes (1.51.0)
+  - boost/shared_ptr-includes (1.51.0)
+  - boost/string_algorithms-includes (1.51.0)
+
+DEPENDENCIES:
+  - armadillo (from `./armadillo-ios`)
+  - boost (from `./`)
+
+EXTERNAL SOURCES:
+  armadillo:
+    :path: ./armadillo-ios
+  boost:
+    :path: ./
+
+SPEC CHECKSUMS:
+  armadillo: 7b257d6653815b747711f5cb2d984dfe7c5c0d98
+  boost: 2b05737c6c81d5c844b8018bf828a18b34aceda6
+
+COCOAPODS: 0.32.1
